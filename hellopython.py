@@ -1,4 +1,4 @@
-__author__ = 'lin.zhongsheng'
+__author__ = 'Jonathan Lim'
 
 """Return the sum result of the number array"""
 def sumArray(nums):
