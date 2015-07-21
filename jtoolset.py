@@ -1,7 +1,7 @@
 __author__ = 'Jonathan Lim'
 
-
 import datetime
+
 
 def multiply(left, right):
     return left * right
@@ -27,6 +27,37 @@ def isLeapYear(year):
         return True
     return False
 
+def autoChange(money):
+    cent25 = 25
+    cent10 = 10
+    cent5 = 5
+    cent1 = 1
+
+    result = []
+
+    if 0 < money < 1:
+        total = money * 10
+        tuple25 = divmod(total, cent25)
+        result[0] = tuple25[0]
+
+        if tuple25[1] != 0:
+            tuple10 = divmod(tuple25[1], cent10)
+            result[1] = tuple10[0]
+
+            if tuple10[1] != 0:
+                tuple5 = divmod(tuple10[1], cent5)
+                result[2] = tuple5[0]
+
+                if tuple5[1] != 0:
+                    tuple1 = divmod(tuple5[1], cent1)
+                    result[3] = tuple1[0]
+
+    return result
+
+def printChanges(changes):
+    cent25 = "25 cents count: %d "
+    cent10 = "10 cents count: %d"
+    cent5 = "5 cents count: % d"
 
 ''' Test '''
 if __name__ == '__main__':
@@ -40,3 +71,6 @@ if __name__ == '__main__':
     print "1900 is leap year? %s" % isLeapYear(1900)
     print "2400 is leap year? %s" % isLeapYear(2400)
     print "2015 is leap year? %s" % isLeapYear(2015)
+
+    print "0.76 Changes as follows:"
+
