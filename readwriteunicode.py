@@ -1,6 +1,6 @@
 __author__ = 'lin.zhongsheng'
 
-CODEC = 'utf-16'
+CODEC = 'utf-8'
 FILE = 'unicode_string.tmp'
 
 hello_out = u'''Hello World. This string is encoded as UTF-16 and and saved in a local file named unicode_string.txt.
