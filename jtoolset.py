@@ -73,7 +73,7 @@ def getEvenNumbers(begin, end):
 
 def printArray(array):
     for index in range(len(array)):
-        print index, array[index]
+        print(index, array[index])
 
 
 def printChanges(changes):
@@ -83,24 +83,24 @@ def printChanges(changes):
     cent1 = "1 cents count: %d"
     changesMessages = [cent25, cent10, cent5, cent1]
     for index in range(len(changes)):
-        print changesMessages[index] % changes[index]
+        print(changesMessages[index] % changes[index])
 
 
 ''' Test '''
 if __name__ == '__main__':
-    print multiply(10, 5)
-    print checkScore(101)
-    print datetime.date.today().year
+    print(multiply(10, 5))
+    print(checkScore(101))
+    print(datetime.date.today().year)
 
     print
 
-    print "1992 is leap year? %s" % isLeapYear(1992)
-    print "1996 is leap year? %s" % isLeapYear(1996)
-    print "2000 is leap year? %s" % isLeapYear(2000)
-    print "1967 is leap year? %s" % isLeapYear(1967)
-    print "1900 is leap year? %s" % isLeapYear(1900)
-    print "2400 is leap year? %s" % isLeapYear(2400)
-    print "2015 is leap year? %s" % isLeapYear(2015)
+    print("1992 is leap year? %s" % isLeapYear(1992))
+    print("1996 is leap year? %s" % isLeapYear(1996))
+    print("2000 is leap year? %s" % isLeapYear(2000))
+    print("1967 is leap year? %s" % isLeapYear(1967))
+    print("1900 is leap year? %s" % isLeapYear(1900))
+    print("2400 is leap year? %s" % isLeapYear(2400))
+    print("2015 is leap year? %s" % isLeapYear(2015))
 
     print
 
@@ -108,5 +108,5 @@ if __name__ == '__main__':
 
     print
 
-    print "Even numbers between 1 and 100:"
+    print("Even numbers between 1 and 100:")
     printArray(getEvenNumbers(1, 100))

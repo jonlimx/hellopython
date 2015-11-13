@@ -23,11 +23,11 @@ astr = ''
 nums = [1, 2.4, 5, 7, 6.5]
 
 while astr != 'X':
-    astr = raw_input('Please choose:')
+    astr = input('Please choose:')
     if astr == '1':
-        print 'Sum of array: %f' % sumArray(nums)
+        print('Sum of array: %f' % sumArray(nums))
     elif astr == '2':
-        print 'Average of array: %f' % avgArray(nums)
+        print('Average of array: %f' % avgArray(nums))
     elif astr == 'X':
         print('Calculation finished!')
     else:

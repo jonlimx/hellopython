@@ -12,19 +12,19 @@ def checkid(id):
     validCharacters = alphas + '_' + digits
     idlen = len(id)
     if idlen <= 1:
-        print 'ID is too short!'
+        print('ID is too short!')
         return
 
     if id[0] not in alphas:
-        print 'ID should begin with alphas'
+        print('ID should begin with alphas')
         return
 
     for index in range(1, idlen-1):
         if id[index] not in validCharacters:
-            print 'Invalid characters found in your ID'
+            print('Invalid characters found in your ID')
             return
 
-    print 'congratulation! Your ID just passed validation!'
+    print('Congratulation! Your ID just passed validation!')
 
 
 if __name__ == '__main__':
