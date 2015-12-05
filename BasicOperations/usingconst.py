@@ -1,4 +1,4 @@
-import const
+from BasicOperations import const
 
 const.value = 5
 print(const.value)
