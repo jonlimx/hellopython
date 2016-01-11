@@ -1,5 +1,11 @@
 # How to handle socket errors.
 # How to execute: python socketerrors.py www.baidu.com http /
+# Four kinds of socket errors as follows
+# 1. socket.error - I/O and communication issues related.
+# 2. socket.gaierror - address resolution issues.
+# 3. socket.herror - like h_error in C
+# 4. socket.timeout - socket timeout
+
 
 import socket
 import sys
