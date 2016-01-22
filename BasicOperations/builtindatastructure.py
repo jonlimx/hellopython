@@ -20,7 +20,7 @@ setA = set('hellooooo, this is michael')
 setB = set('nice, i am lisa')
 # get rid of duplicate items
 print(setA)
-# print the items both in set A and set B
+# print the items both in set A and set Bm
 print(setA & setB)
 # print the items only in set A, but not in set B
 print(setA - setB)

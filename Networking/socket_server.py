@@ -1,3 +1,9 @@
+# Four steps to set up a socket on server side.
+# Step 1: Create the socket object.
+# Step 2: Set the socket options.
+# Step 3: Bind to a port and interface.
+# Step 4: Listen for connections.
+
 # A simple socket server
 # See https://docs.python.org/3/library/socket.html for more details about Socket.
 
