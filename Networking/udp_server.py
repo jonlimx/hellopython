@@ -10,7 +10,7 @@ s.bind((host, port))
 while 1:
     try:
         message, address = s.recvfrom(8192)
-        print "Got data from: ", address
+        print("Got data from: ", address)
         # Echo it back
         s.sendto(message, address)
     except (KeyboardInterrupt, SystemExit):
