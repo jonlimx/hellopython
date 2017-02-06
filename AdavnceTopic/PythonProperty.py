@@ -1,6 +1,6 @@
 class Person(object):
     def __init__(self, name):
-        self.name = name
+        self._name = name
 
     @property
     def name(self):
@@ -26,14 +26,15 @@ class SubPerson(Person):
     @name.setter
     def name(self, value):
         print('Setting name to', value)
-        super(SubPerson, SubPerson).name.__set__(self, value)
+        super().name.__set__(self, value)
 
     @name.deleter
     def name(self):
         print('Deleting name')
-        super(SubPerson, SubPerson).name.__delete__(self)
+        super().name.__delete__(self)
 
 if __name__ == '__main__':
     s = SubPerson('Guido')
+    print(s.name)
 
 
