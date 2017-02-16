@@ -6,6 +6,15 @@ def test_match_search(rexmatchobj, matchmethod='match'):
     else:
         print('Failed to ' + matchmethod + ' .')
 
+
+def test_findall(result):
+    if len(result) == 0:
+        print('Failed to find')
+    else:
+        for item in result:  # result is list as always
+            print(item)
+
+
 # Complete Match
 m = re.match(r'foo', 'food on the table')
 test_match_search(m)
@@ -65,3 +74,15 @@ m = re.search(r'\bThe', 'bit The dog')
 test_match_search(m)
 m = re.search(r'\BThe', 'bitThe dog')
 test_match_search(m)
+
+# findall - always returns a list.
+# 1. If the pattern is a normal one or a single sub group, then return a list of matched strings
+# 2. If the pattern contains several sub groups, then return a list of tuples of matched sub groups
+s = 'This and that and This'
+
+result = re.findall(r'(Th\w+) and (Th\w+).+', s, re.I)
+test_findall(result)
+result = re.findall(r'(Th\w+)', s, re.I)
+test_findall(result)
+result = re.findall(r'(\d\d\d)-(\w\w\w)', '123-dfr-456-ert')
+test_findall(result)
