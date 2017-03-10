@@ -11,10 +11,10 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(('', 52533))
 s.listen(1)
-print "--------Waiting for connection--------"
+print("--------Waiting for connection--------")
 
 while 1:
     conn, address = s.accept()
-    print "Get connection from: ", conn.getpeername()
+    print("Get connection from: ", conn.getpeername())
     conn.close()
 
