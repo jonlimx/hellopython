@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul Reporting</title>
+    <link href="/Content/css?v=h-dMEIhUVhlHBBNxb6eMO_IsBku5pyMLwiwnt40lnWA1" rel="stylesheet"/>
+
+    <link href="/Content/jqueryui?v=4W7BBplzL3AbPIXipZL-e1dlMaoOCbGK-v3GnYRhXqA1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Azul Reporting V1.3</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Created Cases</a></li>
+                    <li><a href="/ClosedCases">Closed Cases</a></li>
+                    <li><a href="/Labor">Labor Log</a></li>
+                    <li><a href="/Survey">Customer Survey</a></li>
+                    <li><a href="/Dtso60">DTSO &gt;= 60</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row">
+<form action="/" method="post">                <fieldset>
+                    <legend>Query Condition</legend>
+
+                    <label for="beginTime">Begin Time:</label>
+                    <input class="datepicker" id="beginTime" name="beginTime" type="text" value="" />
+
+                    <label for="endTime">End Time:</label>
+                    <input class="datepicker" id="endTime" name="endTime" type="text" value="" />
+
+                    <input type="submit" value="Submit" />
+
+                </fieldset>
+</form>        </div>
+        
+
+
+<br />
+
+<div class="row">
+    <h4>Created Case Volume Per PoD</h4>
+    <table class="table">
+
+        <tr>
+            <th>PoD Name</th>
+            <th>Case Volume</th>
+            <th>Case List</th>
+        </tr>
+
+            <tr>
+                <td>POD Azure PaaS Developer</td>
+                <td>9</td>
+                <td>2017031777216 | 2017031777220 | 2017031777246 | 2017031777337 | 2017031777287 | 2017031777319 | 2017031777363 | 2017031777370 | 2017031777372</td>
+            </tr>
+            <tr>
+                <td>POD Azure PaaS Database</td>
+                <td>8</td>
+                <td>2017031777248 | 2017031777359 | 2017031777243 | 2017031777275 | 2017031777304 | 2017031777308 | 2017031777341 | 2017031777362</td>
+            </tr>
+            <tr>
+                <td>POD Azure Paas WebApp</td>
+                <td>1</td>
+                <td>2017031777373</td>
+            </tr>
+
+        <tr>
+            <td>Total</td>
+            <td>18</td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="row">
+    <h4>Case Handled Volume Per Eningeer</h4>
+    <table class="table">
+
+        <tr>
+            <th>Engineer Name</th>
+            <th>Case Volume</th>
+        </tr>
+
+            <tr>
+                <td>ChenRui</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>HeShu</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>XuHua</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>yuezhao</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>YuTao</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ZhangHang3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>XingBing</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>XinYuefeng</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>hexiaoqiang</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>POD Azure Paas WebApp</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>SunPengwei</td>
+                <td>1</td>
+            </tr>
+
+        <tr>
+            <td>Total</td>
+            <td>18</td>
+        </tr>
+
+    </table>
+</div>
+
+
+<div class="row">
+    <h4>Back Log Per PoD</h4>
+    <table class="table">
+
+        <tr>
+            <th>PoD Name</th>
+            <th>Case Volume</th>
+        </tr>
+
+            <tr>
+                <td>POD Azure PaaS Database</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>POD Azure PaaS Developer</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>POD Azure Paas WebApp</td>
+                <td>24</td>
+            </tr>
+
+        <tr>
+            <td>Total</td>
+            <td>83</td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="row">
+    <h4>Back Log Per Engineer</h4>
+    <table class="table">
+
+        <tr>
+            <th>Engineer Name</th>
+            <th>Case Volume</th>
+        </tr>
+
+            <tr>
+                <td>ChenRui</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>ZhangHang3</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>ZhangXiangyu</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>ZhangYannan</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>yuezhao</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>XiuJian</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>XuHua</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>YangWenting</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>XingBing</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>YuTao</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>ZhangHongmei</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>HeShu</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>hexiaoqiang</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>LuYitong</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>POD Azure Paas WebApp</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>XinYuefeng</td>
+                <td>1</td>
+            </tr>
+
+        <tr>
+            <td>Total</td>
+            <td>83</td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="row">
+    <h4>Aged Case (>=14 Days)</h4>
+    <table class="table">
+
+        <tr>
+            <th>Case ID</th>
+            <th>Title</th>
+            <th>CSS ID</th>
+            <th>TFS ID</th>
+            <th>Case Age</th>
+            <th>Company</th>
+        </tr>
+
+            <tr class="alert">
+                <td>2017021772730</td>
+                <td>[HMC]虚拟机数据库服务超时</td>
+                <td>117021715337796</td>
+                <td>31891201</td>
+                <td>28</td>
+                <td>王紫龙</td>
+            </tr>
+            <tr class="alert">
+                <td>2017022373628</td>
+                <td>[HMC]Fordpass login latency</td>
+                <td>117022315364962</td>
+                <td></td>
+                <td>22</td>
+                <td>Ford Company - AP</td>
+            </tr>
+            <tr class="alert">
+                <td>2017030274679</td>
+                <td>[MS-LED]网站访问缓慢</td>
+                <td>117031015436065</td>
+                <td></td>
+                <td>15</td>
+                <td>超享网络</td>
+            </tr>
+            <tr class="alert">
+                <td>2017030274850</td>
+                <td>[MS-LED]数据库缩放无法切换等级</td>
+                <td>117030215396139</td>
+                <td>32310240</td>
+                <td>15</td>
+                <td>用友汽车信息（上海）股份有限公司</td>
+            </tr>
+
+    </table>
+</div>
+        <hr />
+        <footer>
+            <p>&copy; 2017 - Azure CIE Team</p>
+        </footer>
+    </div>
+
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    <script src="/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+    <script src="/bundles/DatePicker?v=uUs5ia9ZSwKBtjuFbNdEVQ0chzpFaaN1a5MjrbecC981"></script>
+
+    
+</body>
+</html>
