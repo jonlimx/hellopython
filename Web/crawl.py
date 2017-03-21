@@ -6,6 +6,7 @@ import os
 import sys
 import urllib.parse
 import urllib.request
+import codecs
 
 class MyHTMLParser(parser.HTMLParser):
     def __init__(self):
@@ -47,10 +48,10 @@ class Retriever(object):
 
     def parse_links(self):
         """Parse out the links found in downloaded HTML file"""
-        f = open(self.file, 'r')
+        f = codecs.open(self.file, 'r', 'utf-8')
         data = f.read()
         f.close()
-        htmlparser = MyHTMLParser(formatter.AbstractFormatter(formatter.DumbWriter(io.StringIO())))
+        htmlparser = MyHTMLParser()
         htmlparser.feed(data)
         htmlparser.close()
         return htmlparser.anchorlist
