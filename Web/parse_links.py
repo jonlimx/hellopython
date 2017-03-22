@@ -6,18 +6,22 @@ import urllib.parse
 from bs4 import BeautifulSoup, SoupStrainer
 from html5lib import parse, treebuilders
 
-URLs = ('http://python.org', 'http://www.baidu.com')
+URLs = ('http://172.31.4.155', )
+
 
 def output(x):
     print('\n'.join(sorted(set(x))))
 
+
 def simpleBS(url, f):
     """simpleBS() - use BeautifulSoup to parse all tags to get anchors"""
-    output(urllib.request.urljoin(url, x['href']) for x in BeautifulSoup(f).findAll('a'))
+    output(urllib.request.urljoin(url, x['href']) for x in BeautifulSoup(f, 'html.parser').findAll('a'))
+
 
 def fasterBS(url, f):
     """fasterBS() - use BeautifulSoup to parse only anchors tags"""
-    output(urllib.request.urljoin(url, x['href']) for x in BeautifulSoup(f, parse_only=SoupStrainer('a')))
+    output(urllib.request.urljoin(url, x['href']) for x in BeautifulSoup(f, 'html.parser', parse_only=SoupStrainer('a')))
+
 
 def htmlparse(url, f):
     """htmlparse() - use HTMLParse to parse anchor tages"""
@@ -34,9 +38,11 @@ def htmlparse(url, f):
     my_parser.feed(f.read())
     output(urllib.request.urljoin(url, x) for x in my_parser.data)
 
+
 def html5libparse(url, f):
     """html5libparse() - use html5lib to parse anchor tags"""
     output(urllib.request.urljoin(url, x.attributes['href']) for x in parse(f) if isinstance(x, treebuilders.simpletree.Element) and x.name == 'a')
+
 
 def process(url, data):
     print('\n*** simples BS')
@@ -48,8 +54,8 @@ def process(url, data):
     print('\n*** HTMLParser')
     htmlparse(url, data)
     data.seek(0)
-    print('\n*** HTML5lin')
-    html5libparse(url, data)
+    #print('\n*** HTML5lib')
+    #html5libparse(url, data)
 
 def main():
     for url in URLs:
